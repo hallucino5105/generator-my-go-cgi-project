@@ -4,6 +4,8 @@ const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
 
+const defaultAppPort = "33001";
+
 module.exports = class extends Generator {
   async prompting() {
     // Have Yeoman greet the user.
@@ -15,9 +17,7 @@ module.exports = class extends Generator {
       )
     );
 
-    this.props = [];
-
-    this.props.push(
+    this.props = [
       await this.prompt([
         {
           type: "input",
@@ -25,8 +25,17 @@ module.exports = class extends Generator {
           message: "Input project name.",
           default: "my_go_cgi_project"
         }
+      ]),
+
+      await this.prompt([
+        {
+          type: "input",
+          name: "appport",
+          message: "Input application port.",
+          default: defaultAppPort
+        }
       ])
-    );
+    ];
 
     this.props = Object.assign({}, ...this.props);
   }
@@ -38,6 +47,7 @@ module.exports = class extends Generator {
       ["_gitignore", ".gitignore", null],
       ["go.mod", "go.mod", this.props],
       ["readme.md", "readme.md", this.props],
+      ["config_init.yaml", "config_init.yaml", this.props],
 
       ["pkg/__projectname__", `pkg/${this.props.project_name}`, this.props],
       ["cmd/__projectname__", `cmd/${this.props.project_name}`, this.props],
@@ -60,6 +70,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.spawnCommand("go", ["mod", "download"]);
+    // This.spawnCommand("go", ["mod", "download"]);
   }
 };
