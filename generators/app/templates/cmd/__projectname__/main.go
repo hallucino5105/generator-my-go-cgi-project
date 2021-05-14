@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/hallucino5105/glog"
-	"github.com/hallucino5105/my_go_cgi_project/cmd/garg"
-	"github.com/hallucino5105/my_go_cgi_project/pkg/<%= project_name %>"
+	"github.com/hallucino5105/<%= project_name %>/cmd/garg"
+	"github.com/hallucino5105/<%= project_name %>/pkg/<%= project_name %>"
 )
 
 func init() {
