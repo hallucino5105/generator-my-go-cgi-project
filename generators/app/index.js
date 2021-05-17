@@ -45,6 +45,7 @@ module.exports = class extends Generator {
 
     this._copyTarget([
       ["_gitignore", ".gitignore", null],
+      ["_editorconfig", ".editorconfig", null],
       ["go.mod", "go.mod", this.props],
       ["readme.md", "readme.md", this.props],
       ["config_init.yaml", "config_init.yaml", this.props],
