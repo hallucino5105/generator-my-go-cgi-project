@@ -61,6 +61,11 @@ module.exports = class extends Generator {
         this.props
       ],
       [
+        "pkg/__projectname__/__projectname__.go",
+        `pkg/${this.props.projectNameSnakeCase}/${this.props.projectNameSnakeCase}.go`,
+        this.props
+      ],
+      [
         "cmd/__projectname__",
         `cmd/${this.props.projectNameSnakeCase}`,
         this.props
