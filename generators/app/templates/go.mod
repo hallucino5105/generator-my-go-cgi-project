@@ -1,4 +1,4 @@
-module github.com/hallucino5105/<%= project_name %>
+module github.com/hallucino5105/<%= projectNameSnakeCase %>
 
 go 1.14
 

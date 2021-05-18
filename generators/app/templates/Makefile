@@ -1,4 +1,4 @@
-APPNAME=<%= project_name %>
+APPNAME=<%= projectNameSnakeCase %>
 
 run:
 	go run cmd/$(APPNAME)/main.go -v

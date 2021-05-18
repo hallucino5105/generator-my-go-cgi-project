@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/hallucino5105/glog"
-	"github.com/hallucino5105/<%= project_name %>/cmd/garg"
-	"github.com/hallucino5105/<%= project_name %>/pkg/<%= project_name %>"
+	"github.com/hallucino5105/<%= projectNameSnakeCase %>/cmd/garg"
+	"github.com/hallucino5105/<%= projectNameSnakeCase %>/pkg/<%= projectNameSnakeCase %>"
 )
 
 func init() {
@@ -12,9 +12,9 @@ func init() {
 }
 
 func main() {
-	glog.Debug("start <%= project_name %>")
+	glog.Debug("start <%= projectNameSnakeCase %>")
 
-	if err := <%= project_name %>.Entry(); err != nil {
+	if err := <%= projectNameSnakeCase %>.Entry(); err != nil {
 		glog.Fatal(err)
 	}
 }

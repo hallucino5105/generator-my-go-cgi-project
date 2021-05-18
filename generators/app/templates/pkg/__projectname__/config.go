@@ -1,4 +1,4 @@
-package <%= project_name %>
+package <%= projectNameSnakeCase %>
 
 import (
 	"fmt"

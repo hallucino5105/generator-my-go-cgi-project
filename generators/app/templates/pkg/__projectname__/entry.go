@@ -1,11 +1,11 @@
-package <%= project_name %>
+package <%= projectNameSnakeCase %>
 
 import (
 	"fmt"
 
 	"github.com/hallucino5105/glog"
-	"github.com/hallucino5105/<%= project_name %>/cmd/garg"
-	"github.com/hallucino5105/<%= project_name %>/pkg/<%= project_name %>/handler"
+	"github.com/hallucino5105/<%= projectNameSnakeCase %>/cmd/garg"
+	"github.com/hallucino5105/<%= projectNameSnakeCase %>/pkg/<%= projectNameSnakeCase %>/handler"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/pkg/errors"

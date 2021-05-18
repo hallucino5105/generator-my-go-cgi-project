@@ -1,4 +1,4 @@
-title: <%= project_name %>
+title: <%= projectNameSnakeCase %>
 serve:
   host: 0.0.0.0
   port: <%= appport %>
