@@ -1,21 +1,17 @@
-package handler
+package urlarg
 
 import (
 	"fmt"
-	"net/url"
 
 	"github.com/labstack/echo"
 )
 
 type URLParam struct{}
 
-func parseArg(c echo.Context) (*url.Values, error) {
+func ParseArg(c echo.Context) (*URLParam, error) {
 	param := URLParam{}
 	if err := c.Bind(&param); err != nil {
 		return nil, fmt.Errorf("argument parse error")
 	}
-
-	v := url.Values{}
-
-	return &v, nil
+	return &param, nil
 }

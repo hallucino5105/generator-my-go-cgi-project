@@ -3,12 +3,13 @@ package handler
 import (
 	"net/http"
 
+	"github.com/hallucino5105/<%= projectNameSnakeCase %>/pkg/urlarg"
 	"github.com/labstack/echo"
 )
 
 func HandlerSample() echo.HandlerFunc {
 	return func(c echo.Context) error {
-		arg, err := parseArg(c)
+		arg, err := urlarg.ParseArg(c)
 		if err != nil {
 			return echo.NewHTTPError(http.StatusInternalServerError, err)
 		} else if arg == nil {

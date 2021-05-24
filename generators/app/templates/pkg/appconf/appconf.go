@@ -1,4 +1,4 @@
-package <%= projectNameSnakeCase %>
+package appconf
 
 import (
 	"fmt"
