@@ -2,6 +2,7 @@ package <%= projectNameSnakeCase %>
 
 import (
 	"fmt"
+  "path"
 
 	"github.com/hallucino5105/glog"
 	"github.com/hallucino5105/<%= projectNameSnakeCase %>/cmd/garg"
