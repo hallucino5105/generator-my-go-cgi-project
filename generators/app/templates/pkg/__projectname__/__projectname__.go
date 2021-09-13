@@ -32,7 +32,7 @@ func startServer(conf *appconf.AppConfig) {
 	e.Use(middleware.Recover())
 	e.Use(middleware.CORS())
 
-	e.GET("/api/sample.json", handler.HandlerSample())
+  e.GET(path.Join(conf.Serve.PublicPath, "/api/sample.json"), handler.HandlerSample())
 
 	addr := fmt.Sprintf("%s:%s", conf.Serve.Host, conf.Serve.Port)
 	glog.Debugf("serve address \"%s\"", addr)

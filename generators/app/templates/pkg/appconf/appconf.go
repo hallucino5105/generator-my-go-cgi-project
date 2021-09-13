@@ -11,13 +11,14 @@ import (
 )
 
 type AppConfig struct {
-	Title string
-	Serve AppConfigServe
+	Title string         `yaml:"title"`
+	Serve AppConfigServe `yaml:"serve"`
 }
 
 type AppConfigServe struct {
-	Host string
-	Port string
+	PublicPath string `yaml:"public_path"`
+	Host       string `yaml:"host"`
+	Port       string `yaml:"port"`
 }
 
 func LoadAppConfig() (*AppConfig, error) {

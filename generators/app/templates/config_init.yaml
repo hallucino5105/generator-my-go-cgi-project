@@ -1,4 +1,5 @@
 title: <%= projectNameSnakeCase %>
 serve:
+  public_path: <%= projectNameKebabCase %>
   host: 0.0.0.0
   port: <%= appport %>

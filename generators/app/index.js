@@ -40,7 +40,8 @@ module.exports = class extends Generator {
 
     const { projectName } = _.find(this.props, "projectName");
     this.props.push({
-      projectNameSnakeCase: _.snakeCase(projectName)
+      projectNameSnakeCase: _.snakeCase(projectName),
+      projectNameKebabCase: _.kebabCase(projectName)
     });
 
     this.props = Object.assign({}, ...this.props);
