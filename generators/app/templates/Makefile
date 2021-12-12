@@ -1,8 +1,8 @@
 APPNAME=<%= projectNameSnakeCase %>
 
 run:
-	go run cmd/$(APPNAME)/main.go -v
+	go run cmd/$(APPNAME) -v
 
 build:
-	go build -o $(APPNAME) cmd/$(APPNAME)/main.go
+	go build -o $(APPNAME) cmd/$(APPNAME)/*
 
