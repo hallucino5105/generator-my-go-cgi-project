@@ -49,8 +49,8 @@ module.exports = class extends Generator {
 
   writing() {
     this._copyTarget([
-      ["_gitignore", ".gitignore", null],
-      ["_editorconfig", ".editorconfig", null],
+      [".gitignore", ".gitignore", null],
+      [".editorconfig", ".editorconfig", null],
       ["go.mod", "go.mod", this.props],
       ["readme.md", "readme.md", this.props],
       ["config_init.yaml", "config_init.yaml", this.props],
@@ -71,6 +71,7 @@ module.exports = class extends Generator {
         `cmd/${this.props.projectNameSnakeCase}`,
         this.props
       ],
+
       ["pkg/urlarg", "pkg/urlarg", this.props],
       ["pkg/appconf", "pkg/appconf", this.props],
       ["cmd/garg", "cmd/garg", null]
