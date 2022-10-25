@@ -6,6 +6,7 @@ const yosay = require("yosay");
 const _ = require("lodash");
 
 const defaultAppPort = "3001";
+const defaultPublicPath = "/api";
 
 module.exports = class extends Generator {
   async prompting() {
@@ -34,6 +35,15 @@ module.exports = class extends Generator {
           name: "appport",
           message: "Input application port.",
           default: defaultAppPort
+        }
+      ]),
+
+      await this.prompt([
+        {
+          type: "input",
+          name: "publicPath",
+          message: "Input public path.",
+          default: defaultPublic
         }
       ])
     ];
