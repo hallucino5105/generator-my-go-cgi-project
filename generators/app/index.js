@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const yosay = require("yosay");
 const _ = require("lodash");
 
-const defaultAppPort = "33001";
+const defaultAppPort = "3001";
 
 module.exports = class extends Generator {
   async prompting() {
@@ -79,14 +79,18 @@ module.exports = class extends Generator {
 
   _copyTarget(targets) {
     for (const t of targets) {
-      if (t[2]) {
+      if (t[2] === null) {
+        this.fs.copy(this.templatePath(t[0]), this.destinationPath(t[1]), {
+          globOptions: { dot: true }
+        });
+      } else {
         this.fs.copyTpl(
           this.templatePath(t[0]),
           this.destinationPath(t[1]),
-          t[2]
+          t[2],
+          {},
+          { globOptions: { dot: true } }
         );
-      } else {
-        this.fs.copy(this.templatePath(t[0]), this.destinationPath(t[1]));
       }
     }
   }
