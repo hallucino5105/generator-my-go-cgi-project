@@ -27,10 +27,10 @@ func LoadAppConfig() (*AppConfig, error) {
 		return nil, errors.WithStack(err)
 	}
 
-	confpath := fmt.Sprintf("%s/config_init.yaml", cwd)
-	glog.Debugf("load init config from \"%s\"", confpath)
+	configPath := fmt.Sprintf("%s/config.yaml", cwd)
+	glog.Debugf("load init config from \"%s\"", configPath)
 
-	buf, err := ioutil.ReadFile(confpath)
+	buf, err := ioutil.ReadFile(configPath)
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}

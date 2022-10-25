@@ -63,7 +63,7 @@ module.exports = class extends Generator {
       [".editorconfig", ".editorconfig", null],
       ["go.mod", "go.mod", this.props],
       ["readme.md", "readme.md", this.props],
-      ["config_init.yaml", "config_init.yaml", this.props],
+      ["config.yaml", "config.yaml", this.props],
       ["Makefile", "Makefile", this.props],
 
       [
