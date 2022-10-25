@@ -43,7 +43,7 @@ module.exports = class extends Generator {
           type: "input",
           name: "publicPath",
           message: "Input public path.",
-          default: defaultPublic
+          default: defaultPublicPath
         }
       ])
     ];
